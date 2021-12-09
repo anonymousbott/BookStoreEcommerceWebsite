@@ -1,0 +1,165 @@
+@charset "ISO-8859-1";
+
+#headermenu{
+	display:table;
+}
+
+/* div element inside the element with id headermenu */
+#headermenu div{
+	display:table-cell;
+	padding-right: 20px;
+}
+
+a:link{
+	color:cornflowerBlue;
+	text-decoration:none;       /* to remove underline */
+}
+
+/* rule for visited link */
+
+a:visited{
+	color:indigo;
+}
+
+/* when mouse is moved over the hyperlink */
+
+a:hover{
+	color:blue;
+	text-decoration: underline;
+}
+
+/* when link is being clicked */
+a:active{
+	color:red;
+}
+
+#headermenu a:link{
+	font-size:larger;
+}
+
+.pageheading{
+	color:darkblue;
+}
+
+table{
+	border:1px solid black;
+	border-collapse: collapse;
+}
+
+th,td{
+	padding:8px;
+}
+
+th{
+	background: darkBlue;
+	color:cornsilk;
+	font-size: larger;
+}
+
+/* table element which has class form */
+table.form{
+	border:0;
+	padding:4px;
+	width:80%;
+	margin:0 auto;
+}
+table.normal{
+	border:0;	
+}
+button{
+	padding:6px;
+	border-radius: 	5px;
+	}
+button[type=submit]{
+	font-weight:bold;
+}
+button:hover{
+	background-color: white;
+	color:green;
+}
+input{
+	border:1px solid;
+	border-radius: 4px;
+	border-color:green;
+	height:20px;
+}
+
+.message{
+	font-style: italic;
+	color:blue;
+}
+
+.error{
+	color:red;
+	font-weight: bold;
+	margin:5px;
+}
+
+div.center{
+	text-align:center;
+}
+
+div.book{
+	display:inline-block;
+	margin:20px;
+	text-align:center;
+}
+
+table.book{
+	border:0;
+	width:80%;
+	margin:0 auto;
+}
+div.book_group{
+	width:80%;
+	margin:0 auto;
+}
+
+div.next_row{
+	clear:both;
+}
+
+img.book_small{
+	width:128px;
+	 height:164px;
+}
+
+img.book_large{
+	width:240px;
+	height:300px;
+}
+
+#book-title{
+	font-size:x-large;
+	font-weight: bold;
+}
+
+#author{
+	font-size: large;
+	font-style: italic;
+}
+
+#description{
+	text-align: justify;
+	vertical-align: top;
+}
+
+.search_image{
+	 display: inline-block;
+	 margin: 20px;
+	 width:10%;
+}
+
+.search_description{
+	display: inline-block;
+	margin: 20px;
+	vertical-align:top; 
+	width: 50%;
+	text-align: left;
+}
+
+.search_price{
+	display: inline-block;
+	margin: 20px; 
+	vertical-align: top;
+}

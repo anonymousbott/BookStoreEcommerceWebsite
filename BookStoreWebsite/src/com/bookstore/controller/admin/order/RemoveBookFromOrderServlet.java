@@ -45,10 +45,13 @@ public class RemoveBookFromOrderServlet extends HttpServlet {
 					total = 0;
 				}
 				bookOrder.setTotal(total);
+				//orderDetails.remove(nextOrderDetail);
 				iterator.remove();
+				orderDetail.setBookOrder(null);
 				//break;
 			}
 		}
+		//bookOrder.setOrderDetails(orderDetails);
 		/*
 		 * request.getSession().setAttribute("bookAddedToOrder", true); String
 		 * redirectUrl = "edit_order?id="; Integer queryParameter =

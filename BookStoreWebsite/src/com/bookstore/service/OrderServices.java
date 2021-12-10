@@ -169,6 +169,12 @@ public class OrderServices {
 		String arrayBookPrice[] = request.getParameterValues("bookPrice");
 		
 		Set<OrderDetail> orderDetails = bookOrder.getOrderDetails();
+		//testcode
+		Iterator<OrderDetail> iterator2 = orderDetails.iterator();
+		while(iterator2.hasNext()) {
+			OrderDetail next = iterator2.next();
+			System.out.println(next.getBook().getTitle()+" " + "--------->");
+		}
 		orderDetails.clear();
 		
 		float total = 0.0f;
@@ -199,6 +205,20 @@ public class OrderServices {
 		
 		String message = "The order "+ bookOrder.getOrderId() + " has been updated successfully";
 		listAll(message);
+	}
+
+	public void deleteOrder() throws ServletException, IOException {
+		Integer orderId = Integer.parseInt(request.getParameter("id"));
+		BookOrder bookOrder = orderDAO.get(orderId);
+		if(bookOrder != null) {
+			orderDAO.delete(orderId);
+			String message = "The Order "+orderId + " has been successfully deleted";
+			listAll(message);
+		}
+		else {
+			String message = "The order " + orderId+ " has been deleted by other admin";
+			CommonUtility.showMessageBackend(message, request, response);
+		}
 	}
 	
 	

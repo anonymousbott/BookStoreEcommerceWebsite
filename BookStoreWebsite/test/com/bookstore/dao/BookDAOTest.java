@@ -181,4 +181,25 @@ public class BookDAOTest {
 		assertTrue(search.size()>0);
 	}
 	
+	@Test
+	public void testListBestSellingBooks() {
+		List<Book> listBestSellingBooks = bookDAO.listBestSellingBooks();
+		for(Book book :listBestSellingBooks) {
+			System.out.println(book.getBookId()+" "+book.getTitle());
+		}
+		Book book = listBestSellingBooks.get(0);
+		int bookId = book.getBookId();
+		assertEquals(11,bookId);
+	}
+	
+	@Test
+	public void testListMostFavouredBooks() {
+		List<Book> listMostFavouredBooks = bookDAO.listMostFavouredBooks();
+		for(Book book : listMostFavouredBooks) {
+			System.out.println(book.getBookId() +" " +book.getTitle());
+		}
+		int bookId = listMostFavouredBooks.get(0).getBookId();
+		assertEquals(11,bookId);
+	}
+	
 }

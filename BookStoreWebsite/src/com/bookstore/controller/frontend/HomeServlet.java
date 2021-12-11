@@ -32,7 +32,11 @@ public class HomeServlet extends HttpServlet {
 		CategoryDAO categoryDAO=new CategoryDAO();
 		BookDAO bookDAO = new BookDAO();
 		List<Book> listNewBook = bookDAO.listNewBook();
+		List<Book> listBestSellingBooks = bookDAO.listBestSellingBooks();
+		List<Book> listMostFavouredBooks = bookDAO.listMostFavouredBooks();
 		request.setAttribute("listNewBook", listNewBook);
+		request.setAttribute("listBestSellingBooks", listBestSellingBooks);
+		request.setAttribute("listMostFavouredBooks", listMostFavouredBooks);
 		String page="frontend/index.jsp";
 		RequestDispatcher dispatcher=request.getRequestDispatcher(page);
 		dispatcher.forward(request, response);

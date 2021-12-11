@@ -76,5 +76,5 @@ public class OrderDAO extends JpaDAO<BookOrder> implements GenericDAO<BookOrder>
 	public List<BookOrder> listByCustomer(Integer customerId) {
 		return super.findWithNamedQuery("BookOrder.listOrderByCustomer", "customerId", customerId);
 	}
-
+	
 }

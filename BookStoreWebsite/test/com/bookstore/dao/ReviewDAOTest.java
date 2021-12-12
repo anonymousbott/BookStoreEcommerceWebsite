@@ -128,5 +128,11 @@ public class ReviewDAOTest {
 		//System.out.println(findReviewByCustomerAndBook.getComment());
 		assertNull(findReviewByCustomerAndBook);
 	}
+	
+	@Test
+	public void testListMostRecentReview() {
+		List<Review> listMostRecentReview = reviewDAO.listMostRecentReview();
+		assertEquals(3,listMostRecentReview.size());
+	}
 
 }

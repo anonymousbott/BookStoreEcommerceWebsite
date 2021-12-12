@@ -203,5 +203,15 @@ public class OrderDAOTest {
 		System.out.println(bookOrder.getCustomer().getEmail());
 		assertNotNull(bookOrder);
 	}
+	
+	@Test
+	public void testListMostRecentSales() {
+		List<BookOrder> listMostRecentSales = orderDAO.listMostRecentSales();
+		for(BookOrder bookOrder :listMostRecentSales) {
+			System.out.println(bookOrder.getCustomer().getCustomerId());
+		}
+		assertEquals(3,listMostRecentSales.size());
+	}
+	
 
 }
